@@ -1,0 +1,51 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.pnpm-debug.log
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+*.log.*
+*.out
+*.out.*
+*.err
+*.err.*
+
+# Redis data (if mounted locally)
+redis-data/
+dump.rdb
+*.rdb
+*.aof
+
+# Frontend build output
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/build/
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Nginx logs (if mapped locally)
+nginx/logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
