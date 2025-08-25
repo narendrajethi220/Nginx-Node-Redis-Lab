@@ -1,0 +1,27 @@
+# docker-compose.yml
+services:
+  redis:
+    image: redis:7
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"   
+    restart: unless-stopped
+
+  api:
+    build: ./api
+    env_file:
+      - ./api/.env
+    environment:
+      - PORT=3000
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - redis
+    ports:
+      - "3000:3000"   # host nginx proxies to this
+    restart: unless-stopped
+
+volumes:
+  redis_data:
