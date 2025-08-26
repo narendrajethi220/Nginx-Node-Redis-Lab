@@ -1,7 +1,6 @@
 # nginx-node-redis-lab
 
-A practice full-stack setup combining **React (Vite)**, **Node.js (Express)**, **Redis**, and **Nginx**.
-The stack demonstrates how a frontend and backend communicate through APIs, with Nginx as the reverse proxy.
+A sample full-stack project demonstrating a React (Vite) frontend, Node.js/Express backend, Redis cache, and Nginx reverse proxy — all running together with Docker Compose. The stack serves static frontend assets via Nginx, proxies API requests to the backend, and uses Redis for caching. Built to learn how Docker Compose and Nginx orchestrate multi-service apps.
 
 ---
 
