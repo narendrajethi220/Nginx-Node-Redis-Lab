@@ -22,6 +22,15 @@ services:
     ports:
       - "3000:3000"   # host nginx proxies to this
     restart: unless-stopped
-
+  
+  nginx:
+    image: nginx:alpine
+    ports: [ "80:80" ]       # public entrypoint
+    volumes:
+      - ./nginx/site.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/static:/usr/share/nginx/html:ro
+    depends_on: [ api ]
+    restart: unless-stopped
+  
 volumes:
   redis_data:
