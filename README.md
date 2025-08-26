@@ -164,6 +164,6 @@ my-app/
 * Add **HTTPS**, logging, monitoring.
 
 ---
- Developed with ❤️ by Narendra Jethi X ChatGPT.
- I would like to thank ChatGPT for this wonderful Documentation.
+ Developed with ❤️ by Narendra Jethi X ChatGPT.\
+ I would like to thank ChatGPT for this wonderful Documentation.\
  Thank you!
